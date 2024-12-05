@@ -1,6 +1,5 @@
 clc;
 
-% 아래의 세 줄에 인풋파일명을 적는다.
 
 BUS = table2array(readtable("CASE_B_BUS DATA.csv"));
 BRANCH = table2array(readtable("CASE_B_BRANCH DATA.csv"));
@@ -212,6 +211,5 @@ while eps > 0.0001
 
 end
 
-% 최종적으로 답을 Result에 저장한다. 1열은 Bus번호, 2열은 전압의 크기, 3열은 위상각(단위: 도(degree))이다.
 Result = [BUS(:, 1), Vmag_O, Theta_O*180/pi];
 disp(Result);
